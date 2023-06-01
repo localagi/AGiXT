@@ -35,3 +35,7 @@ AGiXT_VERSION="1.1.76-beta" docker compose up
 ```
 docker compose pull
 ```
+
+## Configuration
+
+Each AGiXT Agent has its own settings for interfacing with AI providers, and other configuration options. These settings can be set and modified through the web interface.
