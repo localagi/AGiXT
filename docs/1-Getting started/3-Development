@@ -1,0 +1,60 @@
+# Development Setup
+
+
+## Development using docker
+```
+git clone https://github.com/Josh-XT/AGiXT
+cd AGiXT
+docker compose -f docker-compose.yml -f docker-compose.dev.yaml up
+```
+
+## Development using poetry
+
+Clone the repository for the AGiXT back end and start it.
+
+#### Install poetry
+`pip install poetry==1.5.0`
+
+Check if poetry is available via
+
+`poetry --version`
+
+or
+
+`python3 -m poetry --version`
+
+Adapt the following commands accordingly.
+
+#### Setup AGiXT
+```
+git clone https://github.com/Josh-XT/AGiXT
+pip install poetry==1.5.0
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+cd AGiXT
+poetry install --with gpt4free
+playwright install
+```
+
+#### Run Streamlit 
+`poetry run streamlit run Main.py`
+
+#### Run REST
+`poetry run uvicorn app:app --port 7437`
+
+
+Access the web interface at http://localhost:8501
+
+### API Endpoints
+
+AGiXT provides several API endpoints for managing agents, prompts and chains.
+
+If you're not running with Docker, the back end can be run with:
+```
+python agixt/app.py
+```
+
+To learn more about the API endpoints and their usage, visit the API documentation at 
+- [Swagger](http://localhost:7437)
+- [Redoc](http://localhost:7437/redoc)
+
+This documentation is hosted locally and the frontend must be running for these links to work.
