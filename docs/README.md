@@ -64,79 +64,14 @@ This project is under active development and may still have issues. We appreciat
 - **RESTful API**: FastAPI-powered RESTful API for seamless integration with external applications and services.
 - **Expanding AI Support**: Continually updated to include new AI providers and services, ensuring the software stays at the forefront of AI technology.
 
-## Quickstart with Docker
-Clone the repository and run the AGiXT Streamlit Web App.
-```
-git clone https://github.com/Josh-XT/AGiXT && cd AGiXT
-docker compose streamlit up
-```
+## Quickstart
 
-- Web Interface http://localhost:8501
-### Windows Docker Desktop (streamlit only example)
-- Container Name: AGiXT
-- Host Port: 8501:8501/tcp
+see [Quick Start Guide](https://github.com/Josh-XT/AGiXT/edit/main/docs/1-Getting%20started/1-Quick%20Start%20Guide.md)
 
-### Alternative Docker Compose Profiles
+## Development
 
-Run all available services, this includes the FastAPI back end (Port 7437) and NextJS front end (Port 3000).
-```
-docker compose all up
-```
+see [Development Setup](https://github.com/Josh-XT/AGiXT/edit/main/docs/1-Getting%20started/2-Development%20Setup.md)
 
-### Development using docker
-```
-git clone https://github.com/Josh-XT/AGiXT && cd AGiXT
-docker compose -f docker-compose.yml -f docker-compose.dev.yaml up
-```
-
-## Local Development
-
-Clone the repository for the AGiXT back end and start it.
-
-#### Install poetry
-`pip install poetry==1.5.0`
-Check if poetry is available via
-`poetry --version`
-or
-`python3 -m poetry --version`
-Adapt the following commands accordingly.
-
-#### Setup AGiXT
-```
-git clone https://github.com/Josh-XT/AGiXT && cd AGiXT
-pip install poetry==1.5.0
-export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
-poetry install --with gpt4free
-playwright install
-cd agixt
-```
-
-#### Run Streamlit 
-`poetry run streamlit run Main.py`
-
-#### Run REST
-`poetry run uvicorn app:app --port 7437`
-
-
-Access the web interface at http://localhost:8501
-
-### API Endpoints
-
-AGiXT provides several API endpoints for managing agents, prompts and chains.
-
-If you're not running with Docker, the back end can be run with:
-```
-python agixt/app.py
-```
-
-To learn more about the API endpoints and their usage, visit the API documentation at 
-- [Swagger](http://localhost:7437)
-- [Redoc](http://localhost:7437/redoc)
-
-This documentation is hosted locally and the frontend must be running for these links to work.
-## Configuration
-
-Each AGiXT Agent has its own settings for interfacing with AI providers, and other configuration options. These settings can be set and modified through the web interface.
 ## Documentation
 
 Not enough information? Check out the [documentation](https://josh-xt.github.io/AGiXT) for more details.
