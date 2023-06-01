@@ -66,11 +66,11 @@ This project is under active development and may still have issues. We appreciat
 
 ## Quickstart
 
-see [Quick Start Guide](https://github.com/Josh-XT/AGiXT/edit/main/docs/1-Getting%20started/1-Quick%20Start%20Guide.md)
+see [Quick Start Guide](/docs/1-Getting%20started/1-Quick%20Start%20Guide.md)
 
 ## Development
 
-see [Development Setup](https://github.com/Josh-XT/AGiXT/edit/main/docs/1-Getting%20started/2-Development%20Setup.md)
+see [Development Setup](/docs/1-Getting%20started/2-Development%20Setup.md)
 
 ## Documentation
 
